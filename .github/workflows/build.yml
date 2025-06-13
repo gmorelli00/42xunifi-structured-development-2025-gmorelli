@@ -35,7 +35,7 @@ jobs:
 
       - name: Run SonarCloud analysis
         run: |
-          sonar-scanner \
+          sonar-scanner -X \
             -Dsonar.projectKey=gmorelli00_42xunifi-structured-development-2025-gmorelli \
             -Dsonar.organization=gmorelli00 \
             -Dsonar.host.url=https://sonarcloud.io \
