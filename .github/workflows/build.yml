@@ -1,4 +1,4 @@
-name: SonarCloud C Analysis
+name: SonarCloud
 
 on:
   push:
@@ -8,38 +8,30 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  sonarcloud:
-    name: SonarCloud
+  build:
+    name: Build and analyze on SonarCloud
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up SonarCloud
+      - name: Install build-wrapper (for C projects)
+        run: |
+          wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
+          unzip build-wrapper-linux-x86.zip
+          chmod +x build-wrapper-linux-x86/build-wrapper-linux-x86-64
+
+      - name: Run build with build-wrapper
+        run: |
+          mkdir build
+          # Compila tutti i file .c in tutte le src ricorsivamente
+          ./build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir build gcc -c sd00/**/src/*.c sd01/**/src/*.c
+
+      - name: Run SonarCloud analysis
         uses: SonarSource/sonarcloud-github-action@v2
         with:
           projectBaseDir: .
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y build-essential
-
-      - name: Build project
-        run: |
-          mkdir build
-          cd build
-          cmake ..
-          make
-
-      - name: Run SonarCloud analysis
-        run: |
-          sonar-scanner -X \
-            -Dsonar.projectKey=gmorelli00_42xunifi-structured-development-2025-gmorelli \
-            -Dsonar.organization=gmorelli00 \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.cfamily.build-wrapper-output=bw-output \
-            -Dsonar.sources=. \
-            -Dsonar.cfamily.llvm.cov.reportPath=coverage.info
