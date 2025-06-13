@@ -1,0 +1,68 @@
+Fri Jun 13 10:08:23 2025: build-wrapper, version 6.67 (macosx-x86)
+Fri Jun 13 10:08:23 2025: System name: Darwin Nodename: MacBook-Pro-di-Giovanni.local Release: 24.5.0 Version: Darwin Kernel Version 24.5.0: Tue Apr 22 19:53:26 PDT 2025; root:xnu-11417.121.6~2/RELEASE_X86_64 Machine: x86_64
+Fri Jun 13 10:08:23 2025: socket path: /tmp/build-wrapper-socket.utginW
+Fri Jun 13 10:08:23 2025: dynamic library found: /Users/gmorelli/.sonar/build-wrapper-macosx-x86/libinterceptor.dylib
+Fri Jun 13 10:08:23 2025: cwd: </Users/gmorelli/Desktop/Progetti 42/42xunifi-structured-development-2025-gmorelli>
+Fri Jun 13 10:08:23 2025: command executed as: </Users/gmorelli/.sonar/build-wrapper-macosx-x86/build-wrapper-macosx-x86 --out-dir bw-output>
+Fri Jun 13 10:08:23 2025: out-dir absolute path: </Users/gmorelli/Desktop/Progetti 42/42xunifi-structured-development-2025-gmorelli/bw-output>
+Fri Jun 13 10:08:23 2025: command line received: <make clean all>
+Fri Jun 13 10:08:23 2025: env 0: <TERM_PROGRAM=Apple_Terminal>
+Fri Jun 13 10:08:23 2025: env 1: <SHELL=/bin/zsh>
+Fri Jun 13 10:08:23 2025: env 2: <TERM=xterm-256color>
+Fri Jun 13 10:08:23 2025: env 3: <TMPDIR=/var/folders/84/krbkzl9n02bdh2lryk987sdr0000gn/T/>
+Fri Jun 13 10:08:23 2025: env 4: <TERM_PROGRAM_VERSION=455.1>
+Fri Jun 13 10:08:23 2025: env 5: <TERM_SESSION_ID=BF23B148-1C98-4634-A538-09B13AA4F58D>
+Fri Jun 13 10:08:23 2025: env 6: <USER=gmorelli>
+Fri Jun 13 10:08:23 2025: env 7: <SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.sjs9z1LC9E/Listeners>
+Fri Jun 13 10:08:23 2025: env 8: <PATH=/usr/local/bin/git:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/share/dotnet:~/.dotnet/tools>
+Fri Jun 13 10:08:23 2025: env 9: <__CFBundleIdentifier=com.apple.Terminal>
+Fri Jun 13 10:08:23 2025: env 10: <PWD=/Users/gmorelli/Desktop/Progetti 42/42xunifi-structured-development-2025-gmorelli>
+Fri Jun 13 10:08:23 2025: env 11: <XPC_FLAGS=0x0>
+Fri Jun 13 10:08:23 2025: env 12: <XPC_SERVICE_NAME=0>
+Fri Jun 13 10:08:23 2025: env 13: <SHLVL=1>
+Fri Jun 13 10:08:23 2025: env 14: <HOME=/Users/gmorelli>
+Fri Jun 13 10:08:23 2025: env 15: <LOGNAME=gmorelli>
+Fri Jun 13 10:08:23 2025: env 16: <OLDPWD=/Users/gmorelli/Desktop/Progetti 42/42xunifi-structured-development-2025-gmorelli>
+Fri Jun 13 10:08:23 2025: env 17: <NVM_DIR=/Users/gmorelli/.nvm>
+Fri Jun 13 10:08:23 2025: env 18: <NVM_CD_FLAGS=-q>
+Fri Jun 13 10:08:23 2025: env 19: <NVM_RC_VERSION=>
+Fri Jun 13 10:08:23 2025: env 20: <LANG=it_IT.UTF-8>
+Fri Jun 13 10:08:23 2025: env 21: <_=/Users/gmorelli/.sonar/build-wrapper-macosx-x86/build-wrapper-macosx-x86>
+Fri Jun 13 10:08:23 2025: executing: <make clean all>
+Fri Jun 13 10:08:23 2025: initializing json file
+Fri Jun 13 10:08:23 2025: process created with pid: 86912
+Fri Jun 13 10:08:23 2025: parent pid: 86911
+Fri Jun 13 10:08:23 2025: working directory: </Users/gmorelli/Desktop/Progetti 42/42xunifi-structured-development-2025-gmorelli>
+Fri Jun 13 10:08:23 2025: executable: </Users/gmorelli/.sonar/build-wrapper-macosx-x86/build-wrapper-macosx-x86>
+Fri Jun 13 10:08:23 2025: argv[0]: </Users/gmorelli/.sonar/build-wrapper-macosx-x86/build-wrapper-macosx-x86>
+Fri Jun 13 10:08:23 2025: argv[1]: <-c>
+Fri Jun 13 10:08:23 2025: argv[2]: <make>
+Fri Jun 13 10:08:23 2025: argv[3]: <clean>
+Fri Jun 13 10:08:23 2025: argv[4]: <all>
+Fri Jun 13 10:08:23 2025: skipping process with pid: 86912
+Fri Jun 13 10:08:23 2025: process created with pid: 86913
+Fri Jun 13 10:08:23 2025: parent pid: 86912
+Fri Jun 13 10:08:23 2025: working directory: </Users/gmorelli/Desktop/Progetti 42/42xunifi-structured-development-2025-gmorelli>
+Fri Jun 13 10:08:23 2025: executable: </private/tmp/sonarsource-build-wrapper-cache-501/usr/bin/make>
+Fri Jun 13 10:08:23 2025: argv[0]: <make>
+Fri Jun 13 10:08:23 2025: argv[1]: <clean>
+Fri Jun 13 10:08:23 2025: argv[2]: <all>
+Fri Jun 13 10:08:23 2025: skipping process with pid: 86913
+Fri Jun 13 10:08:23 2025: process created with pid: 86913
+Fri Jun 13 10:08:23 2025: parent pid: 86912
+Fri Jun 13 10:08:23 2025: working directory: </Users/gmorelli/Desktop/Progetti 42/42xunifi-structured-development-2025-gmorelli>
+Fri Jun 13 10:08:23 2025: executable: </Library/Developer/CommandLineTools/usr/bin/make>
+Fri Jun 13 10:08:23 2025: argv[0]: </Library/Developer/CommandLineTools/usr/bin/make>
+Fri Jun 13 10:08:23 2025: argv[1]: <clean>
+Fri Jun 13 10:08:23 2025: argv[2]: <all>
+Fri Jun 13 10:08:23 2025: skipping process with pid: 86913
+Fri Jun 13 10:08:23 2025: process created with pid: 86914
+Fri Jun 13 10:08:23 2025: parent pid: 86913
+Fri Jun 13 10:08:23 2025: working directory: </Users/gmorelli/Desktop/Progetti 42/42xunifi-structured-development-2025-gmorelli>
+Fri Jun 13 10:08:23 2025: executable: </private/tmp/sonarsource-build-wrapper-cache-501/bin/rm>
+Fri Jun 13 10:08:23 2025: argv[0]: <rm>
+Fri Jun 13 10:08:23 2025: argv[1]: <-rf>
+Fri Jun 13 10:08:23 2025: argv[2]: <build>
+Fri Jun 13 10:08:23 2025: skipping process with pid: 86914
+Fri Jun 13 10:08:23 2025: finalizing json file
+Fri Jun 13 10:08:23 2025: returned with code: 0
