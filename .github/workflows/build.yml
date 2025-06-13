@@ -1,29 +1,45 @@
-name: Build
+name: SonarCloud C Analysis
+
 on:
   push:
     branches:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
+
 jobs:
-  build:
-    name: Build
-    runs-on: macos-latest
-    env:
-      BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SonarCloud
+        uses: SonarSource/sonarcloud-github-action@v2
         with:
-          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Install Build Wrapper
-        uses: SonarSource/sonarqube-scan-action/install-build-wrapper@v4
-      - name: Run Build Wrapper
-        run: |
-          build-wrapper-macosx-x86 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} xcodebuild
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v4
+          projectBaseDir: .
         env:
-          SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }} # Put the name of your token here
-        with:
-          args: >
-            --define sonar.cfamily.compile-commands="${{ env.BUILD_WRAPPER_OUT_DIR }}/compile_commands.json"
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential
+
+      - name: Build project
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make
+
+      - name: Run SonarCloud analysis
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=<il_tuo_projectKey> \
+            -Dsonar.organization=<la_tua_organizzazione> \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+            -Dsonar.cfamily.build-wrapper-output=bw-output \
+            -Dsonar.sources=. \
+            -Dsonar.cfamily.llvm.cov.reportPath=coverage.info
