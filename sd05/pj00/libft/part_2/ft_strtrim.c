@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorelli <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gmorelli <gmorelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 14:40:31 by gmorelli          #+#    #+#             */
-/*   Updated: 2022/10/14 10:43:43 by gmorelli         ###   ########.fr       */
+/*   Updated: 2025/06/20 15:49:31 by gmorelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -30,9 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 			ft_strlcpy(p, &s1[i], j - i + 1);
 	}
 	else
-	{
-		p = malloc(sizeof(char));
 		p = 0;
-	}
+		
 	return (p);
 }
